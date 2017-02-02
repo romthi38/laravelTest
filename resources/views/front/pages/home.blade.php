@@ -22,6 +22,11 @@
         @endforeach
         </p>
     @endforeach
+    
+    <h2>Tous nos jeux :</h2>
+    @foreach($games as $game)
+        <p>{{ $game->name }}</p>
+    @endforeach
 </div><!-- /.container -->
 
 

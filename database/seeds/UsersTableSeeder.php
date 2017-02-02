@@ -9,6 +9,7 @@ class UsersTableSeeder extends Seeder {
             'email' => 'thibault.romanin@gmail.com',
             'password' => bcrypt('ini01'),
             'game_id' => 1,
+            'is_admin' => true,
             'created_at' => date('Y-m-d')
         ]);
         

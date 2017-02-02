@@ -5,3 +5,10 @@ body {
   padding: 40px 15px;
   text-align: center;
 }
+
+.game_list {
+  margin-bottom: 20px;
+  border: 2px solid lightskyblue;
+  padding: 5px;
+  border-radius: 5px;
+}

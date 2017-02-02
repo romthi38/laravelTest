@@ -7,13 +7,15 @@ class GamesTableSeeder extends Seeder {
         DB::table('games')->insert([
             'name' => 'Metal Gear Solid V',
             'developper' => 'Kojima Company',            
-            'created_at' => date('Y-m-d')
+            'created_at' => date('Y-m-d'),
+            'confirmed' => true
         ]);
         
         DB::table('games')->insert([
             'name' => 'Borderlands 2',
             'developper' => 'Gearbox',            
-            'created_at' => date('Y-m-d')
+            'created_at' => date('Y-m-d'),
+            'confirmed' => true
         ]);
         
         DB::table('games')->insert([

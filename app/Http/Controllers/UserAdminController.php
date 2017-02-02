@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Auth;
 
 use App\Link;
+use App\Game;
+use App\User;
 
 class UserAdminController extends Controller
 {
@@ -26,6 +28,7 @@ class UserAdminController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+        
     {
         //if (! Auth::check() abort(404));
         
@@ -56,5 +59,37 @@ class UserAdminController extends Controller
         } else {
             return redirect()->back()->withInput();
         }
+    }
+    
+    public function getAddGame() {
+        /*$games = Game::All();        
+        $game_user = User::with('games')->where('id',Auth::user()->id)->get();        
+        $data = array('games' => $games, 'game_user' => $game_user);*/
+        
+        $data = array('games' => Game::orderBy('name')->get());  
+        
+        $user = Auth::user();
+        
+        $user_games_ids = $user->games->pluck('id')->toArray();
+        
+        $data['user_games_ids'] = $user_games_ids;
+        
+        return view('front.pages.add_game',$data);
+    }
+    
+    public function postAddGame(Request $request) {
+        $rules = array(
+            'selected_games' => 'exists:games,id'
+        );
+        
+        $games_ids = $request->input('selected_games',[]);        
+        
+        $this->validate($request, $rules);                
+        
+        $user = Auth::user();
+        $user->games()->sync($games_ids);        
+        
+        return redirect()->route('user_profile', [$user->id]);
+        
     }
 }

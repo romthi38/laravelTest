@@ -4,13 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Game extends Model
+class Role extends Model
 {
     public function users() {
         return $this->belongsToMany('App\User');
     }
     
-    public function scopeConfirmed($request) {
-        return $request->where('confirmed', true);
+    public function permissions() {
+        return $this->belongsToMany('App\Permission');
     }
 }

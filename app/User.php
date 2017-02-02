@@ -34,4 +34,16 @@ class User extends Authenticatable
     public function links() {
         return $this->hasMany('App\Link');
     }
+    
+    public function games() {
+        return $this->belongsToMany('App\Game');
+    }
+    
+    public function roles() {
+        return $this->belongsToMany('App\Role');
+    }
+
+    public function permissions() {
+        return $this->hasManyThrough('App\Permission', 'App\Role');
+    }
 }

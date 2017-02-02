@@ -7,13 +7,15 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Miw</a>
+            <a class="navbar-brand" href="">Miw</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="/home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                
+                <li><a href="{{route('admin')}}">Admin</a></li>
+                <li><a href="{{route('game_add_new')}}">Ajout d'un jeu</a></li>
+                <li><a href="{{route('games_list')}}">Jeux</a></li>
+
             
         
                 @if(Auth::check())
