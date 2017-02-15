@@ -293,9 +293,11 @@ class ComposerStaticInite17fddb8d06104e45c66f4f2082208b7
 
     public static $classMap = array (
         'AddFavoriteGame' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_300000_add_favorite_game.php',
+        'CreateAppConfigTable' => __DIR__ . '/../..' . '/database/migrations/2017_02_09_095827_create_app_config_table.php',
         'CreateGameUserTable' => __DIR__ . '/../..' . '/database/migrations/2017_01_26_091133_create_game_user_table.php',
         'CreateGamesTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_200000_create_games_table.php',
         'CreateLinksTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_400000_create_links_table.php',
+        'CreateNotificationsTable' => __DIR__ . '/../..' . '/database/migrations/2017_02_09_094427_create_notifications_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreatePermissionRoleTable' => __DIR__ . '/../..' . '/database/migrations/2017_01_26_145034_create_permission_role_table.php',
         'CreatePermissionsTable' => __DIR__ . '/../..' . '/database/migrations/2017_01_26_144158_create_permissions_table.php',

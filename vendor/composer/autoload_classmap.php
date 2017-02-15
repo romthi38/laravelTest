@@ -7,9 +7,11 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'AddFavoriteGame' => $baseDir . '/database/migrations/2014_10_12_300000_add_favorite_game.php',
+    'CreateAppConfigTable' => $baseDir . '/database/migrations/2017_02_09_095827_create_app_config_table.php',
     'CreateGameUserTable' => $baseDir . '/database/migrations/2017_01_26_091133_create_game_user_table.php',
     'CreateGamesTable' => $baseDir . '/database/migrations/2014_10_12_200000_create_games_table.php',
     'CreateLinksTable' => $baseDir . '/database/migrations/2014_10_12_400000_create_links_table.php',
+    'CreateNotificationsTable' => $baseDir . '/database/migrations/2017_02_09_094427_create_notifications_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreatePermissionRoleTable' => $baseDir . '/database/migrations/2017_01_26_145034_create_permission_role_table.php',
     'CreatePermissionsTable' => $baseDir . '/database/migrations/2017_01_26_144158_create_permissions_table.php',
